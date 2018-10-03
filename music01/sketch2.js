@@ -24,7 +24,7 @@ function setup() {
   rectMode(RADIUS);
   strokeWeight(0);
     
-  // playing the music
+        // playing the music
   song.setVolume(0.1);
   song.play();
 }
