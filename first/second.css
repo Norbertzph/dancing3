@@ -1,0 +1,28 @@
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;}
+
+.container {
+  display: flex; /* or inline-flex */
+}
+
+.img {
+  order: <integer>; /* default is 0 */
+}
+
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
