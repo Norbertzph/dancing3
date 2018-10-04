@@ -1,7 +1,7 @@
 var img;
 
 function setup() 
-createCanvas(windowWidth,widowHeight);
+createCanvas (displayWidth, displayHeight));
 
 img = loadImage("first/purple.png");
 

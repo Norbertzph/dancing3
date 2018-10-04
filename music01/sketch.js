@@ -17,15 +17,12 @@ function preload() {
 function setup() {
   getAudioContext().resume();
 
-  createCanvas(720, 400);
+  createCanvas(displayWidth, displayHeight);
+
   bx = width/2.0;
   by = height/2.0;
   rectMode(RADIUS);
   strokeWeight(0);
-    
-  song.play();
-  song.loop(); 
-  song.setVolume(0.5);
     
 }
 
@@ -46,25 +43,13 @@ function draw() {
 
 }
 
-function mousePressed() {
-  if(overBox) { 
-    locked = true; 
-    fill(255, 255, 255);
-  } else {
-    locked = false;
-  }
-  xOffset = mouseX-bx; 
-  yOffset = mouseY-by; 
-
+function deviceShaken(){
+    
+    if (song.isPlaying() == 0){
+        song.play();
+    }
 }
 
-function mouseDragged() {
-  if(locked) {
-    bx = mouseX-xOffset; 
-    by = mouseY-yOffset; 
-  }
-}
 
-function mouseReleased() {
-  locked = false;
-}
+
+
