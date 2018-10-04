@@ -68,4 +68,3 @@ function mouseDragged() {
 function mouseReleased() {
   locked = false;
 }
-
