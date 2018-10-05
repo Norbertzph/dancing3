@@ -11,7 +11,6 @@ var speed = 3;
 var song;
 var nSpeed,pSpeed;
 var img;
-var dim;
 
 
 
@@ -24,7 +23,7 @@ function setup() {
   getAudioContext().resume();
   
    
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(windowWidth, windowHeight);
 
   bx = width/2.0;
   by = height/2.0;
@@ -35,16 +34,12 @@ function setup() {
   nSpeed = -3;
   pSpeed = 3;
     
-  dim = width/2;
-  background(0);
-  colorMode(HSB, 360, 100, 100);
-  noStroke();
-  frameRate(1);
+    
 }
 
 function draw() { 
     
-
+background(237,34,93);
   image(img, x, y, boxSize, boxSize);
 
     
@@ -65,11 +60,10 @@ function draw() {
             speed = pSpeed;  
 }
   
-  background(0);
-  for (var x = 0; x <= width; x+=dim) {
-  drawGradient(x, height/2);
-  } 
-}
+  
+      
+    }
+    
 
 function deviceShaken(){
     if (song.isPlaying() == 0){
@@ -80,12 +74,7 @@ function deviceShaken(){
     
 }
 
-function drawGradient(x, y) {
-  var radius = dim/2;
-  var h = random(0, 360);
-  for (var r = radius; r > 0; --r) {
-    fill(h, 90, 90);
-    ellipse(x, y, r, r);
-    h = (h + 1) % 360;
-  }
+function windowResized() {
+    resizeCanvas(windowWidth,windowHeight);
 }
+

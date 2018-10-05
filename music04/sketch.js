@@ -20,7 +20,7 @@ function preload() {
 function setup() {
   getAudioContext().resume();
 
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(windowWidth, windowHeight);
 
   bx = width/2.0;
   by = height/2.0;
@@ -65,4 +65,8 @@ function deviceShaken(){
     nSpeed=-10;
     pSpeed=10;
     
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth,windowHeight);
 }

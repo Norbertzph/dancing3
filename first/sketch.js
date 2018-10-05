@@ -1,11 +1,14 @@
 var img;
 
 function setup() 
-createCanvas (displayWidth, displayHeight));
+createCanvas (windowWidth, windowHeight));
 
-img = loadImage("first/purple.png");
 
 
 function draw() { 
-  background(51);
+background(237,34,93);
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth,windowHeight);
 }
