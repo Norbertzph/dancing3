@@ -10,9 +10,11 @@ var y = 0;
 var speed = 3;
 var song;
 var nSpeed,pSpeed;
+var img;
 
 function preload() {
   song = loadSound("music03.mp3");
+  img = loadImage("sprite3.png");
 }
 
 function setup() {
@@ -35,8 +37,7 @@ function draw() {
 
 
     
-  // Draw the box
-  rect(bx, y, boxSize, boxSize);
+  image(img, bx, y, boxSize, boxSize);
     
         y = y + speed;
     
